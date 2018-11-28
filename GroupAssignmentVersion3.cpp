@@ -708,7 +708,7 @@ if(counter-1>16)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 1, " <<counter <<" Hops \n\n\n";
 
 }
 
@@ -716,7 +716,7 @@ if(counter-1<=16)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 1, " <<counter <<"Hops \n\n\n";
 
 }
 
@@ -778,7 +778,7 @@ for(int x1 =0; x1<14; x1++)
 
                                 {
 
-                                                counter++;
+                                                counter2++;
 
                                 }
 
@@ -788,19 +788,19 @@ for(int x1 =0; x1<14; x1++)
 
  
 
-if(counter-1>15)
+if(counter2-1>15)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 2, " <<counter2 <<" Hops \n\n\n";
 
 }
 
-if(counter-1<=15)
+if(counter2-1<=15)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 2, "<<counter2 <<"Hops \n\n\n";
 
 }
 
@@ -862,7 +862,7 @@ for(int x1 =0; x1<14; x1++)
 
                                 {
 
-                                                counter++;
+                                                counter3++;
 
                                 }
 
@@ -872,19 +872,19 @@ for(int x1 =0; x1<14; x1++)
 
  
 
-if(counter-1>16)
+if(counter3-1>16)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 3, " <<counter3 <<" Hops \n\n\n";
 
 }
 
-if(counter-1<=16)
+if(counter3-1<=16)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 3, " <<counter3 <<"Hops \n\n\n";
 
 }
 
@@ -946,7 +946,7 @@ for(int x1 =0; x1<14; x1++)
 
                                 {
 
-                                                counter++;
+                                                counter4++;
 
                                 }
 
@@ -956,19 +956,19 @@ for(int x1 =0; x1<14; x1++)
 
  
 
-if(counter-1>19)
+if(counter4-1>19)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 4, "<<counter4 <<" Hops \n\n\n";
 
 }
 
-if(counter-1<=19)
+if(counter4-1<=19)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 4, " <<counter4 <<"Hops \n\n\n";
 
 }
 
@@ -1030,7 +1030,7 @@ for(int x1 =0; x1<14; x1++)
 
                                 {
 
-                                                counter++;
+                                                counter5++;
 
                                 }
 
@@ -1040,19 +1040,19 @@ for(int x1 =0; x1<14; x1++)
 
  
 
-if(counter-1>18)
+if(counter5-1>18)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 5, " <<counter5 <<" Hops \n\n\n";
 
 }
 
-if(counter-1<=18)
+if(counter5-1<=18)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 5, " <<counter5 <<"Hops \n\n\n";
 
 }
 
@@ -1114,7 +1114,7 @@ for(int x1 =0; x1<14; x1++)
 
                                 {
 
-                                                counter++;
+                                                counter6++;
 
                                 }
 
@@ -1124,19 +1124,19 @@ for(int x1 =0; x1<14; x1++)
 
  
 
-if(counter-1>30)
+if(counter6-1>30)
 
 {
 
-                cout << "Congratulations! You won! But this was not the shortest path, " <<counter <<" Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 6, " <<counter6 <<" Hops \n\n\n";
 
 }
 
-if(counter-1<=30)
+if(counter6-1<=30)
 
 {
 
-                cout << "Congratulations! You won! This is the shortest path, " <<counter <<"Hops \n\n\n";
+                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 6, " <<counter6 <<"Hops \n\n\n";
 
 }
 
@@ -1634,7 +1634,7 @@ system("color f2"); // Changes the Console Color
 
 std::cout << "\t\t_____________________________________________________\n" << endl   /* welcome screen*/
 
-<< "\t\t" << " *****  WELCOME TO MAZE MAINIA  *****" << endl
+<< "\t\t" << " *****  WELCOME TO DSAFM MAZE MAINIA  *****" << endl
 
 << "\t\t__________________________________________________\n\n" << endl;
 
