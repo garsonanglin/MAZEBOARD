@@ -2,17 +2,11 @@
 
 #include <iostream>
 
-#include <windows.h>
+#include <windows.h> 
 
- 
+using namespace std; 
 
-using namespace std;
-
- 
-
-// Critical Game Variables
-
- 
+// Critical Game Variables 
 
 // C x R matrix
 
@@ -116,7 +110,6 @@ const char* mazeboard2[R][C] =
 
 };
 
- 
 
 // Mazeboard for Room 5
 
@@ -155,7 +148,6 @@ const char* mazeboard3[R][C] =
 { "1","1","1","1","1","1","1","1","1","1","1","1","E","1","1","1","1","1","1","1","1","1" }
 
 };
-
  
 
 // Mazeboard for Room 6
@@ -195,7 +187,6 @@ const char* mazeboard4[R][C] =
 { "1","1","1","1","1","1","1","1","1","1","1","1","E","1","1","1","1","1","1","1","1","1" }
 
 };
-
  
 
 // MAzeboard for Room 7
@@ -237,7 +228,6 @@ const char* mazeboard5[R][C] =
 };
 
  
-
 // Mazebaord for Room 8
 
 const char* mazeboard6[R][C] =
@@ -296,9 +286,7 @@ int playerCol = 0; // Stores the Col# that the player is in ("P")
 
 int gameLevel = 0; // Controls which room the player starts from.
 
- 
-
- 
+  
 
 // Function to Check if moving position is valid -- Gerard Code
 
@@ -323,12 +311,11 @@ to move.
 ELSE, the location is not valid and the player is unable to move.
 
  
-
 The code below is the implementation of the above, as well as specifying what mazeboard to read from.
 
 */
 
- 
+
 
 case 1:
 
@@ -386,7 +373,7 @@ return false;
 
 }
 
- 
+
 
 // Function to Check if moving position is an exit -- Gerard Code
 
@@ -407,11 +394,9 @@ Exit. The statement is fed the location to which the player would like to move t
 will return "true".
 
  
-
 ELSE, the game shall continue since the player has not exited the maze as yet.
 
  
-
 The following code is an implentation of above as well as specifying what mazeboard
 
 to read from.
@@ -475,7 +460,6 @@ return false;
 }
 
  
-
 //Function to find the player's position in the mazeboard array -- Gerard Code
 
 void findPlayer(int gameLevel) {
@@ -496,7 +480,7 @@ the mazeboard array) is found, its indices are recorded in the "playerRow" and
 
 the Column).
 
- 
+
 
 The following code is an implementation of the above as well as specifying which
 
@@ -627,7 +611,6 @@ break;
 }
 
 }
-
  
 
 // Basic Game Function Code -- Gerard Code
@@ -656,10 +639,9 @@ If "isValid" and "isExit" are both true, the game prompts the user that they hav
 
 If "isValid" is true but "isExit" is false, the game moves the player to the new location.
 
- 
+
 
 If "isValid" is false, the player does not move at all and is prompted to move elsewhere.
-
  
 
 The following code is an implementation of the above as well as specifying what mazeboard
@@ -1188,7 +1170,7 @@ This switch statement controls what direction the player moves. When the player 
 
 "W", "A", "S" or "D", the switch processes the following:
 
- 
+
 
 If "W" is entered, the new position above the player character ("P") is calculated and
 
@@ -1332,9 +1314,7 @@ break;
 
 }
 
- 
 
- 
 
 // Function to print the maze
 
@@ -1353,7 +1333,6 @@ switch (gameLevel)
 The FOR LOOP STRUCTURE print out each row and column by cycling through the array.
 
  
-
 Below is the implentation of above as well as specifying what mazeboard to print from.
 
 */
@@ -1379,8 +1358,6 @@ std::cout << mazeboard1[index][j] << " ";
  
 
 }
-
- 
 
  
 
@@ -1416,9 +1393,6 @@ std::cout << mazeboard2[index][j] << " ";
 
 }
 
- 
-
- 
 
  
 
@@ -1454,7 +1428,6 @@ std::cout << mazeboard3[index][j] << " ";
 
  
 
- 
 
  
 
@@ -1487,8 +1460,6 @@ std::cout << mazeboard4[index][j] << " ";
  
 
 }
-
- 
 
  
 
@@ -1528,8 +1499,6 @@ std::cout << mazeboard5[index][j] << " ";
 
  
 
- 
-
 std::cout << endl;
 
 }
@@ -1560,9 +1529,7 @@ std::cout << mazeboard6[index][j] << " ";
 
 }
 
- 
-
- 
+  
 
  
 
@@ -1602,13 +1569,11 @@ cout << "This is a maze game\n\n"
 
 << "Press any other key to exit to the main menu at any time.\n\n";
 
- 
 
  
 
 }
 
- 
 
  
 
@@ -1630,25 +1595,17 @@ do {
 
 system("color f2"); // Changes the Console Color
 
- 
-
 std::cout << "\t\t_____________________________________________________\n" << endl   /* welcome screen*/
 
-<< "\t\t" << " *****  WELCOME TO DSAFM MAZE MAINIA  *****" << endl
+<< "\t\t" << " *****  WELCOME TO DSAFM MAZE MANIA  *****" << endl
 
 << "\t\t__________________________________________________\n\n" << endl;
-
- 
 
 std::cout << "\t\t\t -_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_\n" << endl;
 
 std::cout << " \t\t\t -_-_ BELOW ARE YOUR OPTIONS-_-_-_\n";
 
 std::cout << "\t\t\t -_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_\n" << endl << endl;
-
- 
-
- 
 
 std::cout << "\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 
@@ -1674,12 +1631,9 @@ std::cout << endl;
 
 std::cin >> choice; //Accept users input
 
- 
-
 system("cls"); // Clears the Screen
 
  
-
 // Menu Switch Statement
 
 switch (choice) {
