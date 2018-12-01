@@ -1571,7 +1571,7 @@ void gameinstruction()
  
 
 {
-
+//Instructions:
 cout << "This is a maze game\n\n"
 
 << "The objective of this game is to move your character \"P\" from your starting position\n"
@@ -1590,63 +1590,54 @@ cout << "This is a maze game\n\n"
 
  
 
- 
-
 // Main Function
 
 int main()
 
  
-
 {
 
 int choice;
 
- 
 
 do {
 
- 
 
 system("color f2"); // Changes the Console Color
 
- 
 
-cout << "\t\t_____________________________________________________\n" << endl   /* welcome screen*/
+cout << "\t\t__________________________________________________________\n" << endl   /* Welcome Screen*/
 
-<< "\t\t" << " *****  WELCOME TO DSAFM MAZE MAINIA  *****" << endl
+<< "\t\t" << " ************  WELCOME TO DSAFM MAZE MANIA  ************" << endl
 
-<< "\t\t__________________________________________________\n\n" << endl;
-
+<< "\t\t\t\t___________________________________________________________\n\n" << endl;
  
 
 cout << "\t\t\t -_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_\n" << endl;
 
-cout << " \t\t\t -_-_ BELOW ARE YOUR OPTIONS-_-_-_\n";
+cout << " \t\t\t -_-_ BELOW ARE YOUR OPTIONS-_-_-_\n";//This allowa you to choose which room you which to start playing the game from.
 
 cout << "\t\t\t -_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_\n" << endl << endl;
 
- 
 
- 
 
 cout << "\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 
-cout << "\t\tPress 1 to Enter Room 1:  " << endl;
+cout << "\t\tPress 1 to Enter Room 1:  " << endl;//Entrance to Room 1
 
-cout << "\t\tPress 2 to Enter Room 2:  " << endl;
+cout << "\t\tPress 2 to Enter Room 2:  " << endl;//Entrance to Room 2
 
-cout << "\t\tPress 3 to Enter Room 3:  " << endl;
+cout << "\t\tPress 3 to Enter Room 3:  " << endl;//Entrance to Room 3
 
-cout << "\t\tPress 4 to Enter Room 4:  " << endl;
+cout << "\t\tPress 4 to Enter Room 4:  " << endl;//Entrance to Room 4
 
-cout << "\t\tPress 5 to Enter Room 5:  " << endl;
+cout << "\t\tPress 5 to Enter Room 5:  " << endl;//Entrance to Room 5
 
-cout << "\t\tPress 6 to Enter Room 6:  " << endl;
+cout << "\t\tPress 6 to Enter Room 6:  " << endl;//Entrance to Room 5
 
-cout << "\t\tPress 7 to Read Instruction " << endl;
+cout << "\t\tPress 7 to Read Instruction " << endl;//Provides a list of instructions to assist with playing the game.
 
-cout << "\t\tPress 8 to Exit Maze:  " << endl;
+cout << "\t\tPress 8 to Exit Maze:  " << endl;//Exits maze
 
 cout << "\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 
@@ -1737,7 +1728,7 @@ cout << "Invalid Selection. Try again \n";
 
 system("pause");
 
-system("cls");
+system("cls");// Clears the Screen
 
 break;
 
