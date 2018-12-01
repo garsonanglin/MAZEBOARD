@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 
 #include <windows.h> 
@@ -30,9 +29,9 @@ int counter5=0;
 
 void displayMaze(int); // Forward Declaration of the "displayMaze" function.
 
- 
+ // Mazeboard for Room 1
 
-// Mazeboard for Room 1
+cout<<"You are now in room 1.";
 
 const char* mazeboard1[R][C] =
 
@@ -74,6 +73,8 @@ const char* mazeboard1[R][C] =
 
 // Mazeboard for Room 3
 
+cout<<"You are now in room 3.";
+
 const char* mazeboard2[R][C] =
 
 {
@@ -112,6 +113,8 @@ const char* mazeboard2[R][C] =
 
 
 // Mazeboard for Room 5
+
+cout<<"You are now in room 5.";
 
 const char* mazeboard3[R][C] =
 
@@ -152,6 +155,8 @@ const char* mazeboard3[R][C] =
 
 // Mazeboard for Room 6
 
+cout<<"You are now in room 6.";
+
 const char* mazeboard4[R][C] =
 
 {
@@ -190,6 +195,8 @@ const char* mazeboard4[R][C] =
  
 
 // MAzeboard for Room 7
+
+cout<<"You are now in room 7.";
 
 const char* mazeboard5[R][C] =
 
@@ -230,6 +237,8 @@ const char* mazeboard5[R][C] =
  
 // Mazebaord for Room 8
 
+cout<<"You are now in room 8.";
+
 const char* mazeboard6[R][C] =
 
 {
@@ -266,20 +275,15 @@ const char* mazeboard6[R][C] =
 
 };
 
- 
+ // Game Loop Variables
 
-// Game Loop Variables
-
- 
-
-bool isRunning = false; // Controls if the game is running.
+ bool isRunning = false; // Controls if the game is running.
 
 bool exitFlag = false; // Controls when the game should exit.
 
 char direction; // Gets user input which determines the direction they move.
 
  
-
 int playerRow = 0; // Stores the Row# that the player is in ("P")
 
 int playerCol = 0; // Stores the Col# that the player is in ("P")
@@ -287,7 +291,6 @@ int playerCol = 0; // Stores the Col# that the player is in ("P")
 int gameLevel = 0; // Controls which room the player starts from.
 
   
-
 // Function to Check if moving position is valid -- Gerard Code
 
 bool isValid(int gameLevel, int newRow, int newCol) {
@@ -314,8 +317,6 @@ ELSE, the location is not valid and the player is unable to move.
 The code below is the implementation of the above, as well as specifying what mazeboard to read from.
 
 */
-
-
 
 case 1:
 
@@ -372,8 +373,6 @@ return false;
 }
 
 }
-
-
 
 // Function to Check if moving position is an exit -- Gerard Code
 
@@ -490,21 +489,21 @@ mazeboard to read from.
 
 case 1:
 
-for (int i = 0; i < R; i++) {
+ for (int i = 0; i < R; i++) {
 
-for (int i2 = 0; i2 < C; i2++) {
+    for (int i2 = 0; i2 < C; i2++) {
 
-if (*mazeboard1[i][i2] == 'P') {
+       if (*mazeboard1[i][i2] == 'P') {
 
-playerRow = i; // Row Value
+           playerRow = i; // Row Value
 
-playerCol = i2; // Col Value
+           playerCol = i2; // Col Value
 
-}
+           }
 
-}
+     }
 
-}
+ }
 
 break;
 
@@ -512,17 +511,17 @@ case 2:
 
 for (int i = 0; i < R; i++) {
 
-for (int i2 = 0; i2 < C; i2++) {
+     for (int i2 = 0; i2 < C; i2++) {
 
-if (*mazeboard2[i][i2] == 'P') {
+         if (*mazeboard2[i][i2] == 'P') {
 
-playerRow = i; // Row Value
+             playerRow = i; // Row Value
 
-playerCol = i2; // Col Value
+             playerCol = i2; // Col Value
 
-}
+             }
 
-}
+       }
 
 }
 
@@ -532,37 +531,36 @@ case 3:
 
 for (int i = 0; i < R; i++) {
 
-for (int i2 = 0; i2 < C; i2++) {
+     for (int i2 = 0; i2 < C; i2++) {
 
-if (*mazeboard3[i][i2] == 'P') {
+          if (*mazeboard3[i][i2] == 'P') {
 
-playerRow = i; // Row Value
+               playerRow = i; // Row Value
 
-playerCol = i2; // Col Value
+               playerCol = i2; // Col Value
 
-}
+            }
 
-}
-
+      }
 }
 
 break;
 
 case 4:
 
-for (int i = 0; i < R; i++) {
+    for (int i = 0; i < R; i++) {
 
-for (int i2 = 0; i2 < C; i2++) {
+        for (int i2 = 0; i2 < C; i2++) {
 
-if (*mazeboard4[i][i2] == 'P') {
+            if (*mazeboard4[i][i2] == 'P') {
 
-playerRow = i; // Row Value
+                playerRow = i; // Row Value
 
-playerCol = i2; // Col Value
+                playerCol = i2; // Col Value
 
-}
+           }
 
-}
+     }
 
 }
 
@@ -664,42 +662,22 @@ mazeboard1[newRow][newCol] = "P";
 
 system("cls");
 
-for(int x1 =0; x1<14; x1++)
-
-{
-
-                for(int y1 =0; y1<21; y1++)
-
-                {
-
-                                if(mazeboard1[x1][y1] == "2")   
-
-                                {
-
-                                                counter++;
-
-                                }
-
-                }
-
+for(int x1 =0; x1<14; x1++){
+     for(int y1 =0; y1<21; y1++){
+                 
+      if(mazeboard1[x1][y1] == "2") {
+         counter++;
+             }
+       }
 }
 
- 
 
-if(counter-1>16)
-
-{
-
-                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 1, " <<counter <<" Hops \n\n\n";
-
+if(counter-1>16){
+     cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 1, " <<counter <<" Hops \n\n\n";
 }
 
-if(counter-1<=16)
-
-{
-
-                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 1, " <<counter <<"Hops \n\n\n";
-
+if(counter-1<=16){
+   cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 1, " <<counter <<"Hops \n\n\n";
 }
 
 //std::cout << "You won! Congratulations! \n\n\n";
@@ -748,45 +726,30 @@ mazeboard2[newRow][newCol] = "P";
 
 system("cls");
 
-for(int x1 =0; x1<14; x1++)
+for(int x1 =0; x1<14; x1++) {
+   for(int y1 =0; y1<21; y1++) {
 
-{
+       if(mazeboard2[x1][y1] == "2") {
 
-                for(int y1 =0; y1<21; y1++)
+          counter2++;
+   }
 
-                {
-
-                                if(mazeboard2[x1][y1] == "2")   
-
-                                {
-
-                                                counter2++;
-
-                                }
-
-                }
-
+  }
 }
-
  
+if(counter2-1>15){
 
-if(counter2-1>15)
-
-{
-
-                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 2, " <<counter2 <<" Hops \n\n\n";
+ cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 2, " <<counter2 <<" Hops \n\n\n";
 
 }
 
-if(counter2-1<=15)
+if(counter2-1<=15) {
 
-{
-
-                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 2, "<<counter2 <<"Hops \n\n\n";
+ cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 2, "<<counter2 <<"Hops \n\n\n";
 
 }
 
-//std::cout << "You won! Congratulations! \n\n\n";
+//cout << "You won! Congratulations! \n\n\n";
 
 displayMaze(gameLevel);
 
@@ -832,41 +795,23 @@ mazeboard3[newRow][newCol] = "P";
 
 system("cls");
 
-for(int x1 =0; x1<14; x1++)
+for(int x1 =0; x1<14; x1++){
 
-{
-
-                for(int y1 =0; y1<21; y1++)
-
-                {
-
-                                if(mazeboard3[x1][y1] == "2")   
-
-                                {
-
-                                                counter3++;
-
-                                }
-
-                }
-
+           for(int y1 =0; y1<21; y1++)  {
+                 if(mazeboard3[x1][y1] == "2") {
+                       counter3++;
+          }
+     }
 }
 
- 
+ if(counter3-1>16){
 
-if(counter3-1>16)
+  cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 3, " <<counter3 <<" Hops \n\n\n";
+    }
 
-{
+      if(counter3-1<=16) {
 
-                cout << "Congratulations! You won! \n\n\nBut this was not the shortest path in Room 3, " <<counter3 <<" Hops \n\n\n";
-
-}
-
-if(counter3-1<=16)
-
-{
-
-                cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 3, " <<counter3 <<"Hops \n\n\n";
+      cout << "Congratulations! You won! \n\n\nThis is the shortest path in Room 3, " <<counter3 <<"Hops \n\n\n";
 
 }
 
@@ -1475,69 +1420,32 @@ break;
 
 case 5:
 
-for (int index = 0; index <= 14; index++)
+for (int index = 0; index <= 14; index++){
+for (int j = 0; j <= 21; j++){
 
-{
-
- 
-
-for (int j = 0; j <= 21; j++)
-
- 
-
-{
-
- 
-
-std::cout << mazeboard5[index][j] << " ";
-
- 
+cout << mazeboard5[index][j] << " ";
+}
+cout << endl;
 
 }
 
- 
-
- 
-
-std::cout << endl;
-
-}
-
-std::cout << "W - Up\tA - Left\tS - Down\tD - Right\tAny Key To Exit\nEnter a direction: ";
+cout << "W - Up\tA - Left\tS - Down\tD - Right\tAny Key To Exit\nEnter a direction: ";
 
 break;
 
 case 6:
 
-for (int index = 0; index <= 14; index++)
+for (int index = 0; index <= 14; index++){
 
-{
+    for (int j = 0; j <= 21; j++) {
+        cout << mazeboard6[index][j] << " ";
+   }
 
- 
-
-for (int j = 0; j <= 21; j++)
-
- 
-
-{
-
- 
-
-std::cout << mazeboard6[index][j] << " ";
-
- 
+cout << endl;
 
 }
 
-  
-
- 
-
-std::cout << endl;
-
-}
-
-std::cout << "W - Up\tA - Left\tS - Down\tD - Right\tAny Key To Exit\nEnter a direction: ";
+cout << "W - Up\tA - Left\tS - Down\tD - Right\tAny Key To Exit\nEnter a direction: ";
 
 break;
 
@@ -1549,15 +1457,9 @@ break;
 
 }
 
- 
-
 // Function to print the game instruction.
 
-void gameinstruction()
-
- 
-
-{
+void gameinstruction() {
 
 cout << "This is a maze game\n\n"
 
@@ -1569,29 +1471,17 @@ cout << "This is a maze game\n\n"
 
 << "Press any other key to exit to the main menu at any time.\n\n";
 
-
- 
-
 }
 
 
- 
-
 // Main Function
 
-int main()
-
- 
-
-{
+int main() {
 
 int choice;
 
- 
+ do {
 
-do {
-
- 
 
 system("color f2"); // Changes the Console Color
 
@@ -1609,15 +1499,15 @@ std::cout << "\t\t\t -_-_-_-_--_-_-_-_-_-_-_-_-_-_-_-_\n" << endl << endl;
 
 std::cout << "\t\t^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 
-std::cout << "\t\t\t  Press 1 to start level 1:  " << endl;
+std::cout << "\t\t\t  Press 1 for Room 1 " << endl;
 
-std::cout << "\t\t\t  Press 2 Room  3" << endl;
+std::cout << "\t\t\t  Press 2 for Room  3" << endl;
 
-std::cout << "\t\t\t  Press 3 Room  5:  " << endl;
+std::cout << "\t\t\t  Press 3 for Room  5:  " << endl;
 
-std::cout << "\t\t\t  Press 4 Room  6:  " << endl;
+std::cout << "\t\t\t  Press 4 for Room  6:  " << endl;
 
-std::cout << "\t\t\t  Press 5 Room  7:  " << endl;
+std::cout << "\t\t\t  Press 5 for Room  7:  " << endl;
 
 std::cout << "\t\t\t  Press 6 Room  8:  " << endl;
 
@@ -1633,8 +1523,7 @@ std::cin >> choice; //Accept users input
 
 system("cls"); // Clears the Screen
 
- 
-// Menu Switch Statement
+ // Menu Switch Statement
 
 switch (choice) {
 
