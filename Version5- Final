@@ -2,15 +2,11 @@
 
 #include <windows.h>
 
- 
-
 using namespace std;
 
- 
 
 // Critical Game Variables
 
- 
 
 // C x R matrix
 
@@ -31,11 +27,9 @@ int counter4=0;
 int counter5=0;
 
 int counter6=0;
-
  
 
 void displayMaze(int); // Forward Declaration of the "displayMaze" function.
-
  
 
 // Mazeboard for Room 1
@@ -323,12 +317,11 @@ to move.
 ELSE, the location is not valid and the player is unable to move.
 
  
-
 The code below is the implementation of the above, as well as specifying what mazeboard to read from.
 
 */
 
- 
+
 
 case 1:
 
@@ -387,7 +380,6 @@ return false;
 }
 
  
-
 // Function to Check if moving position is an exit -- Gerard Code
 
 bool isExit(int gameLevel, int newRow, int newCol) {
@@ -407,10 +399,9 @@ Exit. The statement is fed the location to which the player would like to move t
 will return "true".
 
  
-
 ELSE, the game shall continue since the player has not exited the maze as yet.
 
- 
+
 
 The following code is an implentation of above as well as specifying what mazeboard
 
@@ -475,7 +466,6 @@ return false;
 }
 
  
-
 //Function to find the player's position in the mazeboard array -- Gerard Code
 
 void findPlayer(int gameLevel) {
@@ -629,7 +619,6 @@ break;
 }
 
  
-
 // Basic Game Function Code -- Gerard Code
 
 void gameFunction(int gameLevel, int newRow, int newCol) {
@@ -648,20 +637,16 @@ the desired location the player would like to move to [the row and column values
 
 perform the necessary checks using the "isValid" function and "isExit" function (see above).
 
- 
 
 If "isValid" and "isExit" are both true, the game prompts the user that they have won.
 
  
-
 If "isValid" is true but "isExit" is false, the game moves the player to the new location.
-
  
 
 If "isValid" is false, the player does not move at all and is prompted to move elsewhere.
 
  
-
 The following code is an implementation of the above as well as specifying what mazeboard
 
 to read from.
