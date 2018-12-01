@@ -14,7 +14,6 @@ using namespace std;
 
 #define R 15 // Size of the Rows
 
- 
 
 int counter=0;           //counter that hold the count for each player position
 
@@ -28,7 +27,8 @@ int counter5=0;
 
 int counter6=0;
  
-
+ 
+ 
 void displayMaze(int); // Forward Declaration of the "displayMaze" function.
  
 
@@ -72,6 +72,7 @@ const char* mazeboard1[R][C] =
 
  
 
+
 // Mazeboard for Room 3
 
 const char* mazeboard2[R][C] =
@@ -111,6 +112,7 @@ const char* mazeboard2[R][C] =
 };
 
  
+
 
 // Mazeboard for Room 5
 
